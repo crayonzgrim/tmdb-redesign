@@ -1,29 +1,32 @@
-import Header from "./components/Header";
-import "./globals.css";
+import ProvidersForTheme from './ProvidersForTheme';
+import Header from './components/Header';
+import './globals.css';
 
 export const metadata = {
-  title: "IMDb",
-  description: "IMDb clone for study nextJS",
+  title: 'IMDb',
+  description: 'IMDb clone for study nextJS',
   icons: {
-    icon: "/favicon.ico",
-  },
+    icon: '/favicon.ico'
+  }
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>
-        {/* Header */}
-        <Header />
+        <ProvidersForTheme>
+          {/* Header */}
+          <Header />
 
-        {/* Navbar */}
+          {/* Navbar */}
 
-        {/* SearchBox */}
-        {children}
+          {/* SearchBox */}
+          {children}
+        </ProvidersForTheme>
       </body>
     </html>
   );
