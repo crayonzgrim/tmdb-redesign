@@ -2,10 +2,6 @@ import Results from './components/Results';
 
 const API_KEY = process.env.TMDB_API_KEY;
 
-// type HomeProps = {
-//   searchParams: any;
-// };
-
 export default async function Home({ searchParams }: any) {
   const genre = searchParams.genre || 'fetchTrending';
 
