@@ -18,13 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body>
         <ProvidersForTheme>
           <Header />
-
           <Navbar />
-
           <SearchBox />
           {children}
         </ProvidersForTheme>

@@ -1,9 +1,11 @@
 import Results from '@/app/components/Results';
 import React from 'react';
 
+const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
+
 export default async function SearchPage({ params }: any) {
   const res = await fetch(
-    `https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${params.searchTerm}&language=ko-KR&include_adult=true`
+    `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${params.searchTerm}&language=ko-KR&include_adult=true`
   );
 
   if (!res.ok) {
